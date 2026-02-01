@@ -11,8 +11,7 @@ def dfs(edges):
                 visited1[node]=True
                 x1.append(node)
                 for neighbor in edges[node]:
-                    if not visited1[neighbor]:
-                        stack1.append(neighbor)
+                    stack1.append(neighbor)
         return x1
     visited2=[False]*len(edges)
     visited2[0]=True
@@ -35,8 +34,7 @@ def dfs(edges):
                 visited3[node3]=True
                 x3.append(node3)
                 for neighbor in edges[node3]:
-                    if not visited3[neighbor]:
-                        dfs_rec_visited_on_pop(neighbor)
+                    dfs_rec_visited_on_pop(neighbor)
             return x3
     visited4=[False]*len(edges)
     visited4[0]=True
@@ -51,3 +49,4 @@ def dfs(edges):
             return x4
     return dfs_itr_visited_on_pop(), dfs_itr_visited_on_push(),dfs_rec_visited_on_pop(node3),dfs_rec_visited_on_push(node4)
 print(dfs(edges))
+
