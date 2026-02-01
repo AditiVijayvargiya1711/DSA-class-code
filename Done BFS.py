@@ -14,7 +14,7 @@ def bfs(edges):
                 x.append(node)
                 visited1[node]=True
                 for neighbor in edges[node]:
-                    if not visited1[neighbor] and neighbor not in queue1:#(neighbor not in queue1: ye hta ke lga ke)
+                    if neighbor not in queue1:#(neighbor not in queue1: ye hta ke lga ke)
                         queue1.append(neighbor)
         return x
     def bfs_visited_on_push():#done both(bfs and detect cycle by bfs)
@@ -28,4 +28,5 @@ def bfs(edges):
         return y
     return bfs_visited_on_pop(),bfs_visited_on_push()
     
+
 print(bfs(edges))
